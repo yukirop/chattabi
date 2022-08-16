@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>chattabi - チャットで計画、旅に出よう。</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.6/lottie.min.js"
+    type="text/javascript"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#top"><img src="./images/logo2.svg" class="header_logo"></a>
+      <ul class="menu">
+        <li class="menu__list"><a href="#about">ABOUT</a></li>
+        <li class="menu__list"><a href="#how_to_use">HOW TO USE</a></li>
+        <li class="menu__list"><a href="#footer">DOWNLOAD</a></li>
+      </ul>
+    </header>
+    <main class="main">
+
+      <!--
+      <div id="lottie"></div>
+      -->
+
+      <section id="top" class="section">
+        <div id="top_animation" class="to_animation"></div>
+        <img src="./images/Ellipse 25.svg" class="top_accent1">
+        <img src="./images/Ellipse 26.svg" class="top_accent2">
+        <h1 class="top_title">旅行の計画をみんなで。</h1>
+        <div class="download_image">
+          <img src="./images/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" class="download_apple">
+          <img src="./images/google-play-badge-3.png" class="download_google">
+        </div>
+      </section>
+      <section id="about" class="section">
+        <div class="about_inner">
+          <img src="./images/Ellipse 34.svg" class="about_accent">
+          <h1 class="about_title">ABOUT</h1>
+          <h2 class="about_sub fadeInTrigger">
+            みんなで会話しながら<br>
+            計画を立ててみませんか？
+          </h2>
+          <p class="about_text fadeInTrigger">
+            みんなで旅行に行くのに、<br>
+            いつも計画を立てるのはひとり。<br>
+            これからは、計画もみんなで<br>
+            楽しもう。
+          </p>
+        </div>
+      </section>
+      <section id="how_to_use" class="section">
+        <div class="green_border_radius">
+          <div class="htu_title_space">
+            <h1 class="htu_title">HOW TO USE</h1>
+            <div class="htu_sub">
+              <img src="./images/logo1.svg" class="htu_logo">
+              <p class="htu_sub_text">の使い方</p>
+            </div>
+          </div>
+          <div class="htu_step">
+            <div id="step1_animation" class="step_animation"></div>
+            <div class="step_item">
+              <div class="step_title">
+                <div class="step_circle"></div>
+                <div class="step_step">
+                  <p class="step_step">STEP</p>
+                  <p class="step_number">01</p>
+                </div>
+              </div>
+              <p class="step_summary">場所と日数を入力</p>
+              <p class="step_text">
+                グループを作成したら代表者が旅行の行き先と日数を入力しましょう。
+                URLやLINEで招待するとメンバーを追加できます。
+              </p>
+            </div>
+          </div>
+          <div class="htu_step">
+            <div id="step2_animation" class="step_animation"></div>
+            <div class="step_item">
+              <div class="step_title">
+                <div class="step_circle"></div>
+                <p class="step_step">STEP</p>
+                <p class="step_number">02</p>
+              </div>
+              <p class="step_summary">アプリからの旅程の提案</p>
+              <p class="step_text">
+                STEP 01 の入力をもとに、アプリがおすすめの旅行プランを提案します。
+                メンバーの投票で詳細を決めていきましょう。
+              </p>
+            </div>
+          </div>
+          <div class="htu_step">
+            <div id="step3_animation" class="step_animation"></div>
+            <div class="step_item">
+              <div class="step_title">
+                <div class="step_circle"></div>
+                <p class="step_step">STEP</p>
+                <p class="step_number">03</p>
+              </div>
+              <p class="step_summary">オープンチャット開始</p>
+              <p class="step_text">
+                みんなで会話しながら旅行プランを決めていきましょう。
+                スムーズに決まるように、たびまるがサポートします。
+              </p>
+            </div>
+          </div>
+          <div class="htu_step">
+            <div id="step4_animation" class="step_animation"></div>
+            <div class="step_item">
+              <div class="step_title">
+                <div class="step_circle"></div>
+                <p class="step_step">STEP</p>
+                <p class="step_number">04</p>
+              </div>
+              <p class="step_summary">予約までアプリで完結</p>
+              <p class="step_text">
+                予約が必要なホテルやレストランなどは、登録しておけば自動で予約されます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="footer">
+      <img src="./images/Rectangle 4.svg" class="footer_accent">
+      <div id="footer_animation" class="footer_animation"></div>
+      <img src="./images/logo2.svg" class="footer_logo">
+      <h2 class="footer_message">ダウンロードして旅に出よう！</h2>
+      <div class="footer_download">
+        <img src="./images/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" class="download_apple">
+        <img src="./images/google-play-badge-3.png" class="download_google">
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./lottie.js"></script>
+    <script src="./index.js"></script>
+    <script src="./fadein.js"></script>
+  </body>
+</html>

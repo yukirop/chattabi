@@ -1,0 +1,375 @@
+/* フォントファイル読み込みのための記述 */
+/* @font-face {
+  font-family: "main-font";
+  src: url("./fonts/file-name.woff") format("woff");
+} */
+
+:root{
+  --header-height : 104px;
+  --color-primary : #3EA584;
+  --color-primary-light : #5FB99C;
+  --color-accent : #F3A72A;
+  --color-accent-light : #FFC656;
+  --color-text : #413523;
+  --color-background : #F2EFE7;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Quicksand', 'M PLUS Rounded 1c';
+  font-weight: 700;
+  color: var(--color-text);
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.header{
+  position : fixed;
+  z-index: 1;
+
+  width: 100%;
+  height: var(--header-height);
+  background: rgba(242,239,231,0.7);
+
+  padding: 2vh 2.5vw;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_logo{
+  height: 8vh;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  gap: 6.5vw;
+}
+
+
+.main{
+  flex: 1;
+}
+
+.section{
+  scroll-margin-top: var(--header-height);
+}
+
+#top{
+  padding-top: var(--header-height);
+  height: 100vh;
+  background-color: var(--color-background);
+
+  display: flex;
+  justify-content: center;
+}
+
+.top_animation{
+  margin: -40px auto;
+  width: 70%;
+}
+
+.top_accent1{
+  position: absolute;
+  left: 4%;
+  bottom: 10%;
+}
+
+.top_accent2{
+  position: absolute;
+  left: calc(4% + 150px);
+  bottom: 8%;
+}
+
+.top_title{
+  position: absolute;
+  width: 288px;
+  height: 142px;
+  left: 11%;
+  bottom: 13%;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.download_image{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+}
+
+@media screen and (max-width: 420px) {
+  .download_image{
+    display: none;
+  }
+}
+
+.download_apple{
+  width: 13vw;
+  min-width: 98px;
+}
+
+.download_google{
+  width: 17vw;
+  min-width: 120px;
+}
+
+#about{
+  background-image: url("./images/about_photo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_inner {
+  position: relative;
+  padding-top: 40px;
+  padding-left: 60px;
+
+}
+
+.about_accent{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* left: 31%; */
+  /* padding-top: 22vh; */
+}
+
+.about_title{
+  color: #77726A;
+  font-size: 4.2rem;
+  position: relative;
+  /* left: 35.5%; */
+  /* padding-top: calc(22vh + 30px); */
+  text-shadow: 6px 4px #DDDAD3;
+}
+
+.about_sub{
+  font-size: 2.3rem;
+  position: relative;
+  padding-top: 36px;
+  /* left: 35.5%; */
+  /* top: 25px; */
+}
+
+.fadeInTrigger{
+  opacity: 0;
+}
+
+.fadeIn{
+  animation-name: fadeInAnime;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeInAnime{
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about_text{
+  font-size: 1.6rem;
+  position: relative;
+  padding-top: 48px;
+  /* left: 35.5%; */
+  /* top: 60px; */
+}
+
+#how_to_use{
+  margin-top: -20px;
+  height: 530vh;
+  background-color: var(--color-background);
+  color: var(--color-background);
+}
+
+.green_border_radius{
+  width: 96%;
+  height: 530vh;
+  background-color: var(--color-primary);
+  border-radius: 0px 80px 80px 0px;
+  padding: 0 160px;
+}
+
+.htu_title_space{
+  padding: 120px 0px;
+}
+
+.htu_title{
+  position: relative;
+  text-align: center;
+  font-size: 5rem;
+  text-shadow: 6px 4px rgba(119,114,106,0.47);
+}
+
+@media screen and (max-width: 420px) {
+  .htu_title{
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    text-shadow: 6px 4px rgba(119,114,106,0.47);
+  }
+}
+
+.htu_sub{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.htu_logo{
+  height: 20px;
+  margin-right: 12px;
+}
+
+.htu_step{
+  display: flex;
+  justify-content: space-between;
+  margin: 200px 0px 630px 0px;
+}
+
+@media screen and (max-width: 820px) {
+  .htu_step{
+    display: block;
+    justify-content: center;
+    margin: 200px 0px 200px 0px;
+  }
+}
+
+#step1_animation{
+  width: 45%;
+  padding: 0 30px;
+}
+
+#step2_animation{
+  width: 1500px;
+  padding-right: 160px;
+}
+
+#step3_animation{
+  width: 500px;
+  padding-left: 20px;
+}
+
+#step4_animation{
+  padding-left: 20px;
+  padding-right: 45px;
+  width: 600px;
+}
+
+.step_circle{
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  position: absolute;
+  left: -42px;
+  top: -3px;
+}
+
+.step_title{
+  font-size: 2.5rem;
+  display: inline-block;
+  text-align: center;
+  padding: 40px 0px 20px 0px;
+  position: relative;
+}
+
+.step_step {
+  z-index: 1;
+  position: relative;
+}
+
+.step_summary{
+  font-size: 40px;
+  padding: 20px 0px;
+}
+
+.step_text{
+  font-size: 1.5rem;
+  width: 33vw;
+  padding-top: 30px;
+}
+
+.footer{
+  height: 80vh;
+  background-color: var(--color-background);
+  position: relative;
+}
+
+.footer_accent{
+  display: fixed;
+  justify-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer_animation{
+  position: absolute;
+  left: 6%;
+}
+
+.footer_logo{
+  height: 72px;
+  position: absolute;
+  left: 3%;
+  bottom: 5%;
+}
+
+.footer_message{
+  font-size: 34px;
+  position: absolute;
+  right: 8%;
+  bottom: 40%;
+}
+
+.footer_download{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 10%;
+  bottom: 22%;
+}
+
+
+/* .step_animation {
+  opacity: 0;
+}
+.step_animation.active {
+  animation: fadein 1s forwards;
+}
+.step_animation.inactive {
+  animation: fadein 1s forwards reverse;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
