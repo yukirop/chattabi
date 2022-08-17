@@ -2,11 +2,11 @@
 const htu_steps = document.querySelectorAll(".step_animation")
 
 htu_steps.forEach((target, i) => {
-    // if (i !== 0) {
-    //     gsap.set(target, {
-    //         opacity: 0,
-    //     })
-    // }
+//     if (i !== 0) {
+//         gsap.set(target, {
+//             opacity: 0,
+//         })
+//     }
     gsap.set(target, {
         opacity: 0,
     })
