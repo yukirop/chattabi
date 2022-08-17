@@ -2,6 +2,7 @@ var windowWidth = $(window).width();
 var windowSm = 768;
 if (windowWidth <= windowSm) {
 //横幅768px以下（スマホ）に適用させるJavaScriptを記述
+    break;
 } else {
 //横幅768px以上（PC、タブレット）に適用させるJavaScriptを記述
 
