@@ -140,14 +140,14 @@ body{
   .hbg-menu{
     position: relative;
     display: block;
-    margin-top: 20%;
+    margin-top: 12%;
     margin-left: 25%;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
   }
 
   .hbg_menu_list{
     font-size: 24px;
-    padding: 12px;
+    padding: 5%;
     position: relative;
     z-index: 120;
   }
@@ -211,7 +211,7 @@ body{
   .top_animation{
     width: 50%;
     height: 250px;
-    margin-top: 45px;
+    margin-top: 8%;
   }
 }
 
