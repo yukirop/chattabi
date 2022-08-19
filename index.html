@@ -33,6 +33,21 @@
         <li class="menu__list"><a href="#footer">DOWNLOAD</a></li>
       </ul>
     </header>
+    <div class="hamburger-menu">
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="menu-btn"><span></span></label>
+      <div class="hbg-contents">
+        <ul class="hbg-menu">
+          <li class="hbg_menu_list"><a href="#about">ABOUT</a></li>
+          <li class="hbg_menu_list"><a href="#how_to_use">HOW TO USE</a></li>
+        </ul>
+        <p class="hbg-message">さあ、旅に出よう！</p>
+        <div class="hbg_download">
+          <img src="./images/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" class="download_apple">
+          <img src="./images/google-play-badge-3.png" class="download_google">
+        </div>
+      </div>
+    </div>
     <main class="main">
 
       <!--
@@ -40,10 +55,12 @@
       -->
 
       <section id="top" class="section">
-        <div id="top_animation" class="to_animation"></div>
+        <div id="top_animation" class="top_animation"></div>
         <img src="./images/Ellipse 25.svg" class="top_accent1">
         <img src="./images/Ellipse 26.svg" class="top_accent2">
-        <h1 class="top_title">旅行の計画をみんなで。</h1>
+        <img src="./images/smart_top_accent.svg" class="smart_accent">
+        <h1 class="top_title1">旅行の計画を</h1>
+        <h1 class="top_title2">みんなで。</h1>
         <div class="download_image">
           <img src="./images/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" class="download_apple">
           <img src="./images/google-play-badge-3.png" class="download_google">
@@ -154,5 +171,12 @@
     <script src="./lottie.js"></script>
     <script src="./index.js"></script>
     <script src="./fadein.js"></script>
+    <script>
+      $(function() {
+        $('.hbg-contents li a').on('click', function(event) {
+          $('#menu-btn-check').prop('checked', false);
+        });
+      });
+    </script>
   </body>
 </html>
