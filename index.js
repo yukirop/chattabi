@@ -50,7 +50,7 @@ const listener = (event) => {
       },
       {
         rootMargin: "-21% 0px -23% 0px",
-        threshold: 0.5,
+        threshold: 1,
       }
     );
 
