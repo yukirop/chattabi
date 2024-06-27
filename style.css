@@ -239,7 +239,7 @@ body{
   .top_animation{
     width: 50%;
     height: auto;
-    /*margin-top: 1%;*/
+    margin-top: -50%;
   }
 }
 
