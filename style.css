@@ -215,34 +215,6 @@ body{
   width: 70%;
 }
 
-.smart_accent{
-  display: none;
-}
-
-@media screen and (max-width: 768px) and (min-height: 800px){
-  .top_animation{
-    width: 50%;
-    height: 250px;
-    margin-top: 200px;
-  }
-  .smart_accent{
-    display: block;
-    width: 130px;
-    height: 99.31px;
-    position: absolute;
-    top: 15%;
-    right: 12%;
-  }
-}
-
-@media screen and (max-height: 800px){
-  .top_animation{
-    width: 50%;
-    height: auto;
-    /*margin-top: 1%;*/
-  }
-}
-
 .top_accent1{
   position: absolute;
   left: 4%;
@@ -477,40 +449,6 @@ body{
   padding: 0 160px;
 }
 
-@media screen and (max-width: 768px){
-  #how_to_use{
-    margin-top: -20px;
-    height: 220vh;
-    background-color: var(--color-background);
-    color: var(--color-background);
-  }
-
-  .green_border_radius{
-    width: 96%;
-    height: 220vh;
-    background-color: var(--color-primary);
-    border-radius: 0px 80px 80px 0px;
-    padding: 0 60px 0 81.5px;
-  }
-}
-
-@media screen and (max-width: 980px) and (min-width: 768px){
-  #how_to_use{
-    margin-top: -20px;
-    height: 260vh;
-    background-color: var(--color-background);
-    color: var(--color-background);
-  }
-
-  .green_border_radius{
-    width: 96%;
-    height: 260vh;
-    background-color: var(--color-primary);
-    border-radius: 0px 80px 80px 0px;
-    padding: 0 60px 0 81.5px;
-  }
-}
-
 .htu_title_space{
   padding: 120px 0px;
 }
@@ -713,8 +651,7 @@ body{
 
 .footer_animation{
   position: absolute;
-  top: 12%;
-  left: 15%;
+  left: 6%;
 }
 
 .footer_logo{
@@ -737,88 +674,6 @@ body{
   position: absolute;
   right: 10%;
   bottom: 22%;
-}
-
-.footer_download_apple{
-  width: 13vw;
-  min-width: 98px;
-}
-
-.footer_download_google{
-  width: 17vw;
-  min-width: 120px;
-}
-
-@media screen and (max-width: 768px) {
-  .footer{
-    height: 40vh;
-    background-color: var(--color-background);
-    position: relative;
-  }
-
-  .footer_logo{
-    height: 28px;
-    position: absolute;
-    left: 5%;
-    bottom: 5%;
-  }
-
-  .footer_message{
-    font-size: 12px;
-    position: absolute;
-    right: 4%;
-    bottom: 28%;
-  }
-}
-
-@media screen and (max-width: 768px) and (min-height: 750px){
-  .footer_animation{
-    transform: scale(0.4, 0.4);
-    position: absolute;
-    top:-70px;
-    left: -90px;
-  }
-
-  .footer_download{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    right: 2%;
-    bottom: 12%;
-  }
-
-  .footer_download_apple{
-    height: 4%;
-  }
-
-  .footer_download_google{
-    height: 4%;
-  }
-}
-
-@media screen and (max-height: 750px){
-  .footer_animation{
-    transform: scale(0.4, 0.4);
-    position: absolute;
-    top:-100px;
-    left: -100px;
-  }
-
-  .footer_download{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    right: 2%;
-    bottom: 10%;
-  }
-
-  .footer_download_apple{
-    height: 4%;
-  }
-
-  .footer_download_google{
-    height: 4%;
-  }
 }
 
 

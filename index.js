@@ -38,21 +38,18 @@ const listener = (event) => {
       });
     });
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            gsap.to(entry.target, { opacity: 1, duration: 0 });
-          } else {
-            gsap.to(entry.target, { opacity: 0, duration: 0 });
-          }
-        });
-      },
-      {
-        rootMargin: "-21% 0px -23% 0px",
-        threshold: 1,
-      }
-    );
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        gsap.to(entry.target, { opacity: 1, duration: 0})
+    } else {
+      gsap.to(entry.target, { opacity: 0, duration: 0})
+    }
+  });
+}, {
+  rootMargin: "-21% 0px -23% 0px",
+  threshold: 1,
+});
 
     htu_steps.forEach((item) => {
       observer.observe(item);
