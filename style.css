@@ -45,8 +45,30 @@ body{
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .header{
+    position : fixed;
+    z-index: 1;
+
+    width: 100%;
+    height: 60px;
+    background: rgba(242,239,231,0.7);
+
+    padding: 2vh 2.5vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .header_logo{
   height: 8vh;
+}
+@media screen and (max-width: 768px) {
+  .header_logo{
+    height: 40px;
+  }
 }
 
 .menu{
@@ -55,6 +77,110 @@ body{
   gap: 6.5vw;
 }
 
+@media screen and (max-width: 768px) {
+  .menu{
+    display: none;
+  }
+}
+
+#menu-btn-check{
+  display: none;
+}
+
+.hbg-menu, .hbg-message, .hbg_download{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    position: fixed;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .menu-btn span,
+  .menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #333;
+    position: absolute;
+  }
+  .menu-btn span:before {
+    bottom: 8px;
+  }
+  .menu-btn span:after {
+    top: 8px;
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span {
+    transform: translateY(4px);
+  }
+  #menu-btn-check:checked ~ .menu-btn span::after {
+    transform: translateY(-8px);
+  }
+
+  .hbg-contents{
+    width: 100%;
+    height: 50%;
+    min-height: 288px;
+    border-radius: 0 0 12% 12%;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 80;
+    background-color: #D6CEC4;
+    transition: all 0.5s;
+  }
+  #menu-btn-check:checked ~ .hbg-contents {
+    top: 0;/*メニューを画面内へ*/
+  }
+
+  /* .hbg_menu_list::before{
+    content: "";
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100;
+  } */
+
+  .hbg-menu{
+    position: relative;
+    display: block;
+    margin-top: 12%;
+    margin-left: 25%;
+    margin-bottom: 8%;
+  }
+
+  .hbg_menu_list{
+    font-size: 24px;
+    padding: 5%;
+    position: relative;
+    z-index: 120;
+  }
+
+  .hbg-message{
+    display: flex;
+    font-size: 16px;
+    margin-left: 27%;
+    margin-bottom: 4%;
+  }
+  .hbg_download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .main{
   flex: 1;
@@ -73,9 +199,48 @@ body{
   justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+  #top{
+    padding-top: 60px;
+    height: 100vh;
+    background-color: var(--color-background);
+
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .top_animation{
-  margin: -40px auto;
+  margin: -50px 30%;
   width: 70%;
+}
+
+.smart_accent{
+  display: none;
+}
+
+@media screen and (max-width: 768px) and (min-height: 800px){
+  .top_animation{
+    width: 50%;
+    height: 250px;
+    margin-top: 200px;
+  }
+  .smart_accent{
+    display: block;
+    width: 130px;
+    height: 99.31px;
+    position: absolute;
+    top: 15%;
+    right: 12%;
+  }
+}
+
+@media screen and (max-height: 800px){
+  .top_animation{
+    width: 50%;
+    height: auto;
+    /*margin-top: 1%;*/
+  }
 }
 
 .top_accent1{
@@ -90,7 +255,22 @@ body{
   bottom: 8%;
 }
 
-.top_title{
+@media screen and (max-width: 768px) {
+  .top_accent1{
+    position: absolute;
+    left: 14%;
+    bottom: 5%;
+    width: 135px;
+  }
+  .top_accent2{
+    position: absolute;
+    left: 32%;
+    bottom: 2%;
+    width: 68.4px;
+  }
+}
+
+.top_title1{
   position: absolute;
   width: 288px;
   height: 142px;
@@ -98,6 +278,46 @@ body{
   bottom: 13%;
   font-weight: 700;
   font-size: 3rem;
+}
+.top_title2{
+  position: absolute;
+  width: 288px;
+  height: 142px;
+  left: 11%;
+  bottom: 5%;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .top_title1{
+    position: absolute;
+    width: 40px;
+    height: 220px;
+    left: 50vw;
+    bottom: 10%;
+    font-weight: 700;
+    font-size: 20px;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    letter-spacing: 12px;
+    line-height: 40px;
+  }
+  .top_title2{
+    position: absolute;
+    width: 40px;
+    height: 160px;
+    left: calc(50vw - 40px);
+    bottom: 6%;
+    font-weight: 700;
+    font-size: 20px;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    letter-spacing: 12px;
+    line-height: 40px;
+  }
 }
 
 .download_image{
@@ -108,7 +328,7 @@ body{
   right: 0px;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
   .download_image{
     display: none;
   }
@@ -163,8 +383,62 @@ body{
   font-size: 2.3rem;
   position: relative;
   padding-top: 36px;
+  line-height: 52px;
   /* left: 35.5%; */
   /* top: 25px; */
+}
+
+.about_text{
+  font-size: 1.6rem;
+  position: relative;
+  padding-top: 48px;
+  line-height: 48px;
+  /* left: 35.5%; */
+  /* top: 60px; */
+}
+
+@media screen and (max-width: 768px) {
+  .about_inner {
+    position: relative;
+    padding-top: 15px;
+    padding-left: 22px;
+  }
+
+  .about_accent{
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* left: 31%; */
+    /* padding-top: 22vh; */
+  }
+
+  .about_title{
+    color: #77726A;
+    font-size: 32px;
+    position: relative;
+    /* left: 35.5%; */
+    /* padding-top: calc(22vh + 30px); */
+    text-shadow: 6px 4px #DDDAD3;
+  }
+
+  .about_sub{
+    font-size: 18px;
+    position: relative;
+    padding-top: 24px;
+    line-height: 32px;
+    /* left: 35.5%; */
+    /* top: 25px; */
+  }
+
+  .about_text{
+    font-size: 12px;
+    position: relative;
+    padding-top: 28px;
+    line-height: 28px;
+    /* left: 35.5%; */
+    /* top: 60px; */
+  }
 }
 
 .fadeInTrigger{
@@ -188,14 +462,6 @@ body{
   }
 }
 
-.about_text{
-  font-size: 1.6rem;
-  position: relative;
-  padding-top: 48px;
-  /* left: 35.5%; */
-  /* top: 60px; */
-}
-
 #how_to_use{
   margin-top: -20px;
   height: 530vh;
@@ -211,6 +477,40 @@ body{
   padding: 0 160px;
 }
 
+@media screen and (max-width: 768px){
+  #how_to_use{
+    margin-top: -20px;
+    height: 220vh;
+    background-color: var(--color-background);
+    color: var(--color-background);
+  }
+
+  .green_border_radius{
+    width: 96%;
+    height: 220vh;
+    background-color: var(--color-primary);
+    border-radius: 0px 80px 80px 0px;
+    padding: 0 60px 0 81.5px;
+  }
+}
+
+@media screen and (max-width: 980px) and (min-width: 768px){
+  #how_to_use{
+    margin-top: -20px;
+    height: 260vh;
+    background-color: var(--color-background);
+    color: var(--color-background);
+  }
+
+  .green_border_radius{
+    width: 96%;
+    height: 260vh;
+    background-color: var(--color-primary);
+    border-radius: 0px 80px 80px 0px;
+    padding: 0 60px 0 81.5px;
+  }
+}
+
 .htu_title_space{
   padding: 120px 0px;
 }
@@ -222,11 +522,15 @@ body{
   text-shadow: 6px 4px rgba(119,114,106,0.47);
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
+  .htu_title_space{
+    padding: 60px 0px;
+  }
+
   .htu_title{
     position: relative;
     text-align: center;
-    font-size: 24px;
+    font-size: 32px;
     text-shadow: 6px 4px rgba(119,114,106,0.47);
   }
 }
@@ -239,8 +543,15 @@ body{
 }
 
 .htu_logo{
-  height: 20px;
+  height: 24px;
   margin-right: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .htu_logo{
+    height: 16px;
+    margin-right: 12px;
+  }
 }
 
 .htu_step{
@@ -253,29 +564,67 @@ body{
   .htu_step{
     display: block;
     justify-content: center;
-    margin: 200px 0px 200px 0px;
+    margin: 60px 0px 120px 0px;
   }
 }
 
 #step1_animation{
-  width: 45%;
+  width: 40%;
   padding: 0 30px;
 }
 
 #step2_animation{
-  width: 1500px;
+  width: 55%;
   padding-right: 160px;
 }
 
 #step3_animation{
-  width: 500px;
+  width: 45%;
   padding-left: 20px;
 }
 
 #step4_animation{
   padding-left: 20px;
   padding-right: 45px;
-  width: 600px;
+  width: 45%;
+}
+
+.step_animation{
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #step1_animation{
+    width: 45%;
+    padding: 0;
+    transform: scale(1.8, 1.8);
+    margin-bottom: 25px;
+    margin-left: 45px;
+  }
+
+  #step2_animation{
+    width: 55%;
+    padding-right: 0;
+    transform: scale(1.6, 1.6);
+    margin-bottom: 20px;
+  }
+
+  #step3_animation{
+    width: 45%;
+    padding-left: 0;
+    transform: scale(1.8, 1.8);
+    margin-bottom: 20px;
+    margin-left: 50px;
+  }
+
+  #step4_animation{
+    padding-left: 0;
+    padding-right: 0;
+    width: 45%;
+    transform: scale(1.8, 1.8);
+    margin-bottom: 20px;
+    margin-left: 45px;
+  }
 }
 
 .step_circle{
@@ -312,6 +661,42 @@ body{
   padding-top: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .step_circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    position: absolute;
+    left: -24px;
+    top: 10px;
+  }
+
+  .step_title{
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    position: relative;
+  }
+
+  .step_step, .step_number {
+    z-index: 1;
+    position: relative;
+  }
+
+  .step_summary{
+    font-size: 18px;
+    padding: 5px 0px;
+  }
+
+  .step_text{
+    font-size: 12px;
+    width: 84%;
+    padding-top: 5px;
+  }
+}
+
 .footer{
   height: 80vh;
   background-color: var(--color-background);
@@ -328,7 +713,8 @@ body{
 
 .footer_animation{
   position: absolute;
-  left: 6%;
+  top: 12%;
+  left: 15%;
 }
 
 .footer_logo{
@@ -351,6 +737,88 @@ body{
   position: absolute;
   right: 10%;
   bottom: 22%;
+}
+
+.footer_download_apple{
+  width: 13vw;
+  min-width: 98px;
+}
+
+.footer_download_google{
+  width: 17vw;
+  min-width: 120px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer{
+    height: 40vh;
+    background-color: var(--color-background);
+    position: relative;
+  }
+
+  .footer_logo{
+    height: 28px;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+  }
+
+  .footer_message{
+    font-size: 12px;
+    position: absolute;
+    right: 4%;
+    bottom: 28%;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-height: 750px){
+  .footer_animation{
+    transform: scale(0.4, 0.4);
+    position: absolute;
+    top:-70px;
+    left: -90px;
+  }
+
+  .footer_download{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 2%;
+    bottom: 12%;
+  }
+
+  .footer_download_apple{
+    height: 4%;
+  }
+
+  .footer_download_google{
+    height: 4%;
+  }
+}
+
+@media screen and (max-height: 750px){
+  .footer_animation{
+    transform: scale(0.4, 0.4);
+    position: absolute;
+    top:-100px;
+    left: -100px;
+  }
+
+  .footer_download{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 2%;
+    bottom: 10%;
+  }
+
+  .footer_download_apple{
+    height: 4%;
+  }
+
+  .footer_download_google{
+    height: 4%;
+  }
 }
 
 
