@@ -219,7 +219,7 @@ body{
   display: none;
 }
 
-@media screen and (max-width: 768px) and (min-height: 800px){
+@media screen and (max-width: 768px) and (min-height: 750px){
   .top_animation{
     width: 50%;
     height: 250px;
@@ -235,11 +235,19 @@ body{
   }
 }
 
-@media screen and (max-height: 800px){
+@media screen and (max-height: 750px){
   .top_animation{
     width: 50%;
     height: auto;
     margin-top: -20%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .top_animation{
+    width: 50%;
+    height: auto;
+    margin-top: -75%;
   }
 }
 
